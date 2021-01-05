@@ -5,7 +5,7 @@
 I modified the code to support displaying corresponding images when annotating. 
 
 
-## PREVIOUS README FROM THE Authors.
+## PREVIOUS README FROM THE AUTHOR.
 
 PCAT点云标注工具-使用手册
 ---------------------
