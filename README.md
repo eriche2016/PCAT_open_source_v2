@@ -1,6 +1,6 @@
 
 
-# Annotating the point cloud for object detection. 
+# Annotating point clouds for object detection. 
 
 I modified the code to support displaying corresponding images when annotating. 
 
