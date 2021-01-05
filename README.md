@@ -3,7 +3,8 @@
 # Annotating point clouds for object detection. 
 
 I modify [the project](https://github.com/halostorm/PCAT_open_source) to support displaying corresponding images when annotating. 
-
+Just set the path information in [file](https://github.com/eriche2016/PCAT_open_source_v2/blob/main/src/rviz_cloud_annotation/src/rviz_cloud_annotation_plugin.h#L206-L248) 
+and feel free to use it. 
 
 ## PREVIOUS README FROM THE AUTHOR.
 
