@@ -2,7 +2,7 @@
 
 # Annotating point clouds for object detection. 
 
-I modified the code to support displaying corresponding images when annotating. 
+I modify [the project](https://github.com/halostorm/PCAT_open_source) to support displaying corresponding images when annotating. 
 
 
 ## PREVIOUS README FROM THE AUTHOR.
