@@ -5,7 +5,7 @@
 // StringVector m_image_files_Showing;
 // m_image_files_Showing.push_back("/home/ps/lidar_annotation/image/145.jpg".c_str());
 // typedef std::vector<std::string> StringVector;
-// StringVector m_image_files_Showing; 
+// StringVector m_image_files_Showing;
 
 // std::string m_image_files_Showing = std::string("/home/ps/lidar_annotation/image/145.jpg");
 // m_image_files_Showing.push_back("/home/ps/lidar_annotation/image/145.jpg");
@@ -970,15 +970,16 @@ void QRVizCloudAnnotation::onSetControlPointMaxWeight(const std_msgs::Int32 &msg
   // ROS_INFO("Here: Again!!");
   // std::string image_path = RVizCloudAnnotation::m_image_files[0];
   // ROS_INFO("Here: Again %s", image_path.c_str());
-  // commented out by hxw  
-  // commented by hxw 
-  // m_image_files = rviz_cloud_annotation::read_image_label("/home/ps/lidar_annotation/image/"); 
-  // std::cout << "file: " << m_image_files[0] << std::endl; 
+  // commented out by hxw
+  // commented by hxw
+  // m_image_files = rviz_cloud_annotation::read_image_label("/home/ps/lidar_annotation/image/");
+  // std::cout << "file: " << m_image_files[0] << std::endl;
   // showImageLabel("/home/ps/lidar_annotation/image/2.png");
-  // ROS_INFO("Hello.");  
-  // ROS_INFO("image: %s", m_image_files[1]);  
-  showImageLabel(m_image_files[fileid]); 
-  fileid = fileid + 1; 
+  // ROS_INFO("Hello.");
+  // ROS_INFO("image: %s", m_image_files[1]);
+  showImageLabel(m_image_files[fileid]);
+  // commented out by hxw 
+  // fileid = fileid + 1;
 }
 
 void QRVizCloudAnnotation::onSetBiasZero(const std_msgs::Empty &msg)
@@ -1393,6 +1394,8 @@ void QRVizCloudAnnotation::onNew()
     kerb_id = 0;
     const std_msgs::Int32 msg;
     onSetObjectId(msg);
+    // added by hxw 
+    fileid = fileid + 1;
   }
 }
 
@@ -1609,7 +1612,7 @@ void QRVizCloudAnnotation::showImageLabel(std::string imagePath)
     std::cout << "open image ok" << std::endl;
   }
   sensor_msgs::ImagePtr msg = cv_bridge::CvImage(std_msgs::Header(), "bgr8", image).toImageMsg();
-  
+
   // std::cout << "hxw: convert to image msg to using cv_bridge" << std::endl;
   m_image_label_pub.publish(msg);
 }
